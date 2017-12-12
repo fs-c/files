@@ -28,14 +28,11 @@
   <body>
     <div class="container vertical-parent">
       <div class="row">
-        <div class="twelve columns">
+        <div class="six columns">
           <p>
-            Simple, no bullshit file upload service. </br>
-            <small class="muted">I do not collect, log or store any information about you.</small>
+            Simple, no bullshit file upload service.
           </p>
-        </div>
 
-        <div class="twelve columns">
           <form ref="uploadForm"
             action="./upload"
             method="post"
@@ -43,7 +40,16 @@
               <button type="button"><label for="file-input">Choose file</label></button>
               <input type="file" name="files" id="file-input" multiple/>
               <button type="submit" class="button-primary">Upload</button>
-           </form>
+         </form>
+        </div>
+
+        <div class="six columns">
+          <p><small>
+            I do not collect, log or store any information about the users of this service. 
+            Do not upload any files that violate local or US law. Files may be 
+            overwritten, deleted or otherwise removed at any point in time. </br>
+            <a href="./index">index</a> <a href="mailto:fsoc@firemail.cc">contact</a>
+          </p></small>
         </div>
       </div>
     </div>
