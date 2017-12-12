@@ -21,7 +21,7 @@
   <div class="container vertical-parent">
     <% files.forEach(file => { %> 
       <p>
-        <a href="../<%= file.filename %>">/<%= file.filename %></a>, 
+        <a href="./<%= file.filename %>">/<%= file.filename %></a>, 
         <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes</p>
     <% }) %>
   </div>
