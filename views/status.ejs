@@ -22,7 +22,8 @@
     <% files.forEach(file => { %> 
       <p>
         <a href="./<%= file.filename %>">/<%= file.filename %></a>, 
-        <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes</p>
+        <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes
+      </p></br>
     <% }) %>
   </div>
 </body>
