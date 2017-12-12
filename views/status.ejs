@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+    
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+    
+  <link rel="stylesheet" href="./css/styles.css">
+    
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+  <title>files / status</title>
+</head>
+
+<body>
+  <div class="container vertical-parent">
+    <% files.forEach(file => { %> 
+      <p>
+        <a href="../<%= file.filename %>">/<%= file.filename %></a>, 
+        <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes</p>
+    <% }) %>
+  </div>
+</body>
+
+</html>

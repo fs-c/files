@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">    
+    
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>files</title>
+
+    <style>
+
+      label {
+        cursor: pointer }
+      input {
+        display: none}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container vertical-parent">
+      <div class="row">
+        <div class="twelve columns">
+          <p>
+            Simple, no bullshit file upload service. </br>
+            <small class="muted">I do not collect, log or store any information about you.</small>
+          </p>
+        </div>
+
+        <div class="twelve columns">
+          <form ref="uploadForm"
+            action="./upload"
+            method="post"
+            encType="multipart/form-data">
+              <button type="button"><label for="file-input">Choose file</label></button>
+              <input type="file" name="files" id="file-input" multiple/>
+              <button type="submit" class="button-primary">Upload</button>
+           </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
