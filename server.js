@@ -11,6 +11,7 @@ app.use(require('morgan')('dev', {
 
 app.use(express.static('public'))
 
+app.use('/index', require('./routes/index'))
 app.use('/upload', require('./routes/upload'))
 
 app.use(express.static('files'))
