@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/head %>
+
+  <title>files / index</title>
+
+  <style>
+  
+    .container {
+      margin-top: 1em }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>
+      <% files.forEach(name => { %> 
+        <a href="./<%= name %>">/<%= name %></a></br>
+      <% }) %>
+    </p>
+  </div>
+</body>
+
+</html>
