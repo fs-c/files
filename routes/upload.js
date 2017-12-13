@@ -12,7 +12,7 @@ const upload = multer({
       cb(null,
          id.generate() + f.originalname.slice(f.originalname.lastIndexOf('.')))
   }),
-  limits: { fieldSize: 1024 * 1024 * 100 }
+  limits: { fieldSize: 1024 * 1024 * 1024 }
 })
 
 router.post('/', upload.array('files'), (req, res) =>
