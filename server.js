@@ -13,7 +13,10 @@ app.use(require('./scripts/cleanup'))
 
 app.use(express.static('public'))
 
-app.use('/index', require('./routes/index'))
+app.use('/', require('./routes/index'))
+
+app.use('/index', require('./routes/fileindex'))
+
 app.use('/upload', require('./routes/upload'))
 app.use('/delete', require('./routes/delete'))
 
