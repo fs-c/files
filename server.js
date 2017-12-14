@@ -22,4 +22,6 @@ app.use('/delete', require('./routes/delete'))
 
 app.use(express.static('files'))
 
+app.use(require('./routes/error'))
+
 app.listen(8084)
