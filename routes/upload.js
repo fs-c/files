@@ -15,7 +15,15 @@ const upload = multer({
   limits: { fieldSize: 1024 * 1024 * 1024 }
 })
 
-router.post('/', upload.array('files'), (req, res) =>
-  res.render('status', { files: req.files }))
+router.post('/', upload.array('files'), (req, res, next) => {
+  if (!req.files[0])
+    next(new Error('No file(s) provided.'))
+
+  res.render('status', {
+    status: 'ok',
+    message: `${req.files.length} files uploaded successfully.`,
+    files: req.files
+  })
+})
 
 router.get('/', (req, res) => res.redirect('../'))
