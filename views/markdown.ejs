@@ -4,18 +4,26 @@
 <head>
   <%- include('partials/head') %>
 
+  <link rel="stylesheet" href="./css/markdown.css">
+
   <title>files / <%= locals.title || 'document' %></title>
 
   <style>
-    .markdown {
+    .markdown-body {
       margin-top: 1em }
+
+    @media (max-width: 750px) {
+      .markdown-body {
+        padding: 15px
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
 
-    <div class="ten columns markdown">
+    <div class="ten columns markdown-body">
       <%- locals.markdown || '<h1>Whoops, something went wrong :/</h1>' %>
     </div>
 
