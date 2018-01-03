@@ -3,6 +3,6 @@ const router = require('express').Router()
 module.exports = router
 
 router.get('/', (req, res) => 
-  res.render('fileIndex', {
+  res.render('fileindex', {
     files: require('fs').readdirSync('./files')
   }))

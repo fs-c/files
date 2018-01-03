@@ -15,7 +15,7 @@ app.use(express.static('public'))
 
 app.use('/', require('./routes/index'))
 
-app.use('/index', require('./routes/fileIndex'))
+app.use('/index', require('./routes/fileindex'))
 
 app.use('/upload', require('./routes/upload'))
 app.use('/delete', require('./routes/delete'))
