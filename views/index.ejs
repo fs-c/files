@@ -38,7 +38,7 @@
             I do not collect, log or store any information about the users of this service. 
             Do not upload any files that violate local or US law. Files may be 
             overwritten, deleted or otherwise removed at any point in time. 
-            <%= Math.round(data[0].use) %>% of the disk space is currently in use. </br>
+            <%= locals.data ? Math.round(data[0].use) : 'NaN' %>% of the disk space is currently in use. </br>
             <a href="./index">index</a> <a href="mailto:fsoc@firemail.cc">contact</a>
           </small></p>
         </div>
