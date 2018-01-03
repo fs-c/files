@@ -5,5 +5,8 @@ const router = require('express').Router()
 module.exports = router
 
 router.get('/', (req, res) => {
-  si.fsSize().then(data => res.render('index', { data })).catch(console.error)
+  // Get fs information, render anyways if error.
+  si.fsSize()
+    .then(data => res.render('index', { data }))
+    .catch(err => res.render('index'))
 })
