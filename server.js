@@ -15,10 +15,12 @@ app.use(express.static('public'))
 
 app.use('/', require('./routes/index'))
 
-app.use('/index', require('./routes/fileindex'))
+app.use('/index', require('./routes/fileIndex'))
 
 app.use('/upload', require('./routes/upload'))
 app.use('/delete', require('./routes/delete'))
+
+app.use('/*.md', require('./routes/markdown'))
 
 app.use(express.static('files'))
 
