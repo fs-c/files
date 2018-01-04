@@ -22,6 +22,6 @@ router.get('/:path', (req, res, next) => {
   res.render('status', {
     status: 'ok',
     message: `Deleted ${success.length} file(s)` + 
-      `${error ? `, failed deleting ${error.length} file(s)` : ''}.`
+      `${error[0] ? `, failed deleting ${error.length} file(s)` : ''}.`
   })
 })
