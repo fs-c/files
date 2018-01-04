@@ -9,26 +9,20 @@
 
 <body>
   <div class="container vertical-parent">
-    <% if (locals.message) { %>
-      <div class="twelve columns">
-        <p class="<%= status %>">
-          <% if (locals.head) { %> <b> <%= head %> </b> <% } %>
-          <%= message %>
-        </p>
-      </div>
-    <% } %>
+    <div class="vertical-child">
+      <span class="<%= status %>">
+        <% if (locals.head) { %> <b> <%= head %> </b> <% } %>
+        <%= message %>
+      </span></br>
 
-    <% if (locals.files) { %>
-      <div class="twelve columns">      
-        <p>
-          <% files.forEach(file => { %> 
-            <a href="./<%= file.filename %>">/<%= file.filename %></a>, 
-            <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes
-            </br>
-          <% }) %>
-        </p>
-      </div>
-    <% } %>
+      <% if (locals.files) { files.forEach(file => { %>
+        <a href="/files/<%= file.filename %>">/<%= file.filename %></a>, 
+        <%= file.mimetype %> (<%= file.encoding %>), <%= file.size %> bytes
+        </br>
+      <% })} %>
+
+      <small><a href="/">back</a></small>      
+    </div>
   </div>
 </body>
 
