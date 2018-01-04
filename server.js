@@ -10,6 +10,10 @@ app.use(require('morgan')('dev', {
   stream: { write: msg => require('./logger').verbose(msg.trim()) }
 }))
 
+if (process.env.NODE_ENV === 'dev')
+  app.get('/files/*', (req, res) =>
+    res.redirect('/' + req.originalUrl.slice(7)))
+
 // Call cleanup at every request.
 app.use(require('./scripts/cleanup'))
 
