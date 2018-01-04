@@ -7,7 +7,10 @@ module.exports = router
 
 router.get('/', (req, res, next) => {
   let file = req.originalUrl
-  try { file = fs.readFileSync('./files' + file, 'utf8') } catch(e) { return next(e) }
+
+  try {
+    file = fs.readFileSync('./files' + file, 'utf8')
+  } catch(e) { return next(e) }
 
   res.render('markdown', { markdown: marked(file) })
 })
