@@ -21,7 +21,7 @@ router.post('/', upload.array('files'), (req, res, next) => {
 
   res.render('status', {
     status: 'ok',
-    message: `${req.files.length} files uploaded successfully.`,
+    message: `${req.files.length} file(s) uploaded successfully.`,
     files: req.files
   })
 })
