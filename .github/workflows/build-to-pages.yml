@@ -1,0 +1,40 @@
+name: Deploy contents to Pages
+
+# Run on push to default branch but also allow triggering manually
+on:
+  push:
+    branches: [$default-branch]
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment, newer ones take precedence
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build index page
+        run:  tree -H '.' --charset utf-8 -o index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
