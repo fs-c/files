@@ -3,7 +3,7 @@ name: Deploy contents to Pages
 # Run on push to default branch but also allow triggering manually
 on:
   push:
-    branches: [$default-branch]
+    branches: [archive]
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
