@@ -62,7 +62,7 @@ const Hero = () => {
 
 const Experience = () => {
     const ExperienceItem = ({ title, from, to, time, children }) => (
-        <div>
+        <li>
             <div className="flex flex-row gap-4 justify-between">
                 <span className="font-bold">
                     {title}
@@ -76,12 +76,12 @@ const Experience = () => {
             <p className="text-gray-700">
                 {children}
             </p>
-        </div>
+        </li>
     );
 
     return (<>
-        <section className="p-8">
-            <div className="flex flex-col gap-6 max-w-screen-md print:max-w-none mx-auto">
+        <section className="px-8 sm:px-16 py-12">
+            <ul className="flex flex-col gap-6 max-w-screen-md print:max-w-none mx-auto">
                 <ExperienceItem title="BORG Linz" from="2015" to="2020">
                     In a branch with particular consideration for Informatics. Also attended HeadStart@Informatics classes at JKU during this time.
                 </ExperienceItem>
@@ -99,7 +99,7 @@ const Experience = () => {
                 <ExperienceItem title="JKU" from="2021" to="">
                     Studying to obtain a Bachelor's degree in Computer Science. 
                 </ExperienceItem>
-            </div>
+            </ul>
         </section>
     </>);
 };
@@ -112,8 +112,8 @@ const Page = ({ children }) => (
 
         <div className="grow"></div>
 
-        <footer class="px-8 py-4 text-gray-400 text-sm text-center print:block hidden">
-            This CV and cover letter are built with React and TailwindCSS. <a href="https://github.com/fs-c/files/tree/archive/misc/cv">See source.</a>
+        <footer class="px-16 py-4 text-gray-400 text-sm text-center print:block hidden">
+            This CV and cover letter are built with React and TailwindCSS. <a href="https://github.com/fs-c/files/blob/archive/misc/cv/src/App.jsx">See source.</a>
         </footer>
     </section>
 );
@@ -127,7 +127,7 @@ const App = () => {
         </Page>
         
         <Page>
-            <div className="text-lg bg-gray-800 text-gray-300 py-8 px-8">
+            <div className="text-lg bg-gray-800 text-gray-300 px-8 sm:px-16 py-8">
                 <p className="max-w-screen-md print:max-w-none mx-auto">
                     I am a motivated developer and quick learner with years of 
                     experience working on a variety of personal projects, primarily using JavaScript, 
@@ -137,7 +137,7 @@ const App = () => {
                 </p>
             </div>
 
-            <div className="px-8 py-8 text-gray-700">
+            <div className="px-8 sm:px-16 py-8 text-gray-700">
                 <div className="flex flex-col gap-4 max-w-screen-md print:max-w-none mx-auto">
                     <p>
                         I maintain a blog on <a href="https://fsoc.space/words">fsoc.space/words</a> to 
@@ -149,21 +149,24 @@ const App = () => {
 
                     <p>
                         My proudest project is <a href="https://github.com/fs-c/maniac">maniac</a>, 
-                        a cheat for the game osu!mania. It reads game state from memory to then simulate 
-                        human gameplay. The first working commit to the repository was in 2018 and it is still 
-                        being actively maintained. It gets thousands of views and hundreds of downloads 
-                        per week. Maniac is written in C++ with CMake as the build tool, using GitHub Actions 
-                        to generate public debug builds for each commit and to automate releases.
+                        a cheat for the game osu!mania, which is downloaded hundreds of times per week. 
+                        It reads game state from memory to then simulate human gameplay. 
+                        The first working commit to the repository was in 2018 and I am still 
+                        actively maintaining it, with occasional bugfixes from others. 
+                        Maniac is written in C++ with CMake as the build tool, using GitHub Actions 
+                        to generate public debug builds for each commit and to automate releases 
+                        of trusted production builds. 
                     </p>
 
                     <p>
                         I have some experience with Java thanks to university courses but 
-                        have never used it for a serious project. Similarly, I have worked 
+                        have never used it in the context of a serious project. Similarly, I have worked 
                         with Angular in the past but am not particularly familiar with it. 
                         I am confident that my experience in related technologies will allow me 
                         to quickly reach a productive proficiency in any language or framework 
-                        you might use in your stack and excited to work with technologies 
-                        that are new to me.
+                        you might use in your stack. 
+                        Additionally, I look forward to gaining experience with technologies that 
+                        are new to me.
                     </p>
 
                     <p>
