@@ -175,6 +175,10 @@ const App = () => {
                 </div>
             </div>
         </Page>
+
+        <footer class="px-16 py-4 text-gray-400 text-sm text-center print:hidden block bg-gray-200">
+            This CV and cover letter are built with React and TailwindCSS. <a href="https://github.com/fs-c/files/blob/archive/misc/cv/src/App.jsx">See source.</a>
+        </footer>
     </>);
 };
 
