@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    print-color-adjust: exact;
+}
+
+a {
+    @apply underline;
+}
